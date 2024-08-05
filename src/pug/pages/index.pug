@@ -1,0 +1,28 @@
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Fitness
+        //
+        //link(rel="stylesheet", href="./scss/main.scss")
+        style
+            include ../../lib/swiper/swiper-bundle.min.css
+            include ../../scss/main.css
+
+    body
+        //h1.h1 Hello World
+        //a(href="#").btn Button
+        //a(href="#").btn-outline Buttong
+        //
+        //input.btn(type="submit" value="Button")
+        //input.btn-outline(type="submit" value="Button")
+        //svg.svg-inst
+        //    use(href="../../img/sprite/brands.svg#instagram")
+        include ../sections/_header
+        main.main
+            include ../sections/_result
+
+        script(src="../../lib/swiper/swiper-bundle.min.js")
+        script(src="../../js/main.js")
