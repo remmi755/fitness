@@ -757,14 +757,21 @@ input:focus {
 .result-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1.875rem;
 }
 .result__img {
+  display: flex;
   flex-shrink: 0;
+}
+.result__img-bottom {
+  padding-top: 9rem;
+  margin-left: -9rem;
 }
 .result__desc {
   flex-grow: 1;
   max-width: 33.75rem;
+  padding-bottom: 1.4375rem;
 }
 .result .h4 {
   margin-bottom: 0.375rem;
