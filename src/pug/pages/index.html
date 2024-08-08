@@ -152,6 +152,17 @@ input:focus {
   padding: 0;
 }
 
+@media (max-width: 61.9375rem) {
+  *.section-pb {
+    padding-block: 3.125rem 3.75rem;
+  }
+}
+@media (max-width: 48rem) {
+  *.section-pb {
+    padding-block: 2.1875rem 1.4375rem;
+  }
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -852,11 +863,27 @@ input:focus {
   align-items: center;
   gap: 9.0625rem;
 }
+@media (max-width: 85.25rem) {
+  .premium-content {
+    gap: 1.875rem;
+    justify-content: space-between;
+  }
+}
 .premium__desc {
   flex-grow: 1;
   max-width: 30.5625rem;
   padding-top: 3.875rem;
   flex-shrink: 0;
+}
+@media (max-width: 85.25rem) {
+  .premium__desc {
+    padding-top: 0;
+  }
+}
+@media (max-width: 74.9375rem) {
+  .premium__desc {
+    flex-shrink: 1;
+  }
 }
 .premium__desc .h4 {
   margin-bottom: 0.25rem;
@@ -871,6 +898,19 @@ input:focus {
   flex-direction: column;
   flex-shrink: 0;
 }
+.premium__img img {
+  aspect-ratio: 3/2;
+}
+@media (max-width: 74.9375rem) {
+  .premium__img img {
+    width: 23.75rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .premium__img img {
+    width: 16.25rem;
+  }
+}
 .premium__img-top {
   position: relative;
   z-index: 2;
@@ -879,6 +919,12 @@ input:focus {
   padding-left: 9.375rem;
   margin-top: -8.75rem;
 }
+@media (max-width: 74.9375rem) {
+  .premium__img-bottom {
+    padding-left: 3.125rem;
+    margin-top: -8.75rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
-</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="header-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="header-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="premium"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>
+</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="header-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="header-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result section-pb"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="premium section-pb"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>

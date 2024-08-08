@@ -5,6 +5,11 @@
     display: flex;
     align-items: center;
     gap: remy(145);
+
+    @media (max-width: remy(1364)) {
+      gap: remy(30);
+      justify-content: space-between;
+    }
   }
 
   &__desc {
@@ -12,6 +17,14 @@
     max-width: remy(489);
     padding-top: remy(62);
     flex-shrink: 0;
+
+    @media (max-width: remy(1364)) {
+      padding-top: 0;
+    }
+
+    @media (max-width: remy(1199)) {
+      flex-shrink: 1;
+    }
 
     .h4 {
       margin-bottom: remy(4);
@@ -28,6 +41,18 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+
+    img{
+      aspect-ratio: 3 / 2;
+
+      @media (max-width: remy(1199)) {
+        width: remy(380);
+      }
+
+      @media (max-width: remy(991)) {
+        width: remy(260);
+      }
+    }
   }
 
     &__img-top {
@@ -39,5 +64,9 @@
     padding-left: remy(150);
     margin-top: remy(-140);
 
+    @media (max-width: remy(1199)) {
+      padding-left: remy(50);
+      margin-top: remy(-140);
+    }
   }
 }
