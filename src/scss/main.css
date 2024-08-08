@@ -832,4 +832,40 @@ input:focus {
   }
 }
 
+.premium {
+  padding-block: 14rem 8.0625rem;
+}
+.premium-content {
+  display: flex;
+  align-items: center;
+  gap: 9.0625rem;
+}
+.premium__desc {
+  flex-grow: 1;
+  max-width: 30.5625rem;
+  padding-top: 3.875rem;
+  flex-shrink: 0;
+}
+.premium__desc .h4 {
+  margin-bottom: 0.25rem;
+}
+.premium__desc-text {
+  font-size: 1rem;
+  line-height: 2.3125rem;
+  margin-bottom: 1.25rem;
+}
+.premium__img {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.premium__img-top {
+  position: relative;
+  z-index: 2;
+}
+.premium__img-bottom {
+  padding-left: 9.375rem;
+  margin-top: -8.75rem;
+}
+
 /*# sourceMappingURL=main.css.map */
