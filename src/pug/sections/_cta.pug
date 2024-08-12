@@ -1,0 +1,23 @@
+mixin cta-slider(imgName)
+    .swiper-slide
+        .swiper__item
+            img(src=`../../img/${imgName}.webp`, alt="img", loading="lazy")
+
+section.cta
+    .slider-content
+
+        .slider-content__title
+            h2.h2 Become more than you are.
+            p.subtitle Staying active is great fun and keeps you healthy.
+                Check out how you can join in.
+
+
+            a.btn(href="#!") Let’s do it!
+
+        .swiper.cta-slider
+            .swiper-wrapper
+                +cta-slider('cta-slide1')
+                +cta-slider('header-slide2')
+                +cta-slider('header-slide3')
+                +cta-slider('header-slide4')
+            .swiper-pagination

@@ -214,6 +214,13 @@ input:focus {
   font-size: 2.375rem;
 }
 
+.subtitle {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  font-family: "Open Sans";
+  line-height: 1.35;
+}
+
 .accent-span {
   color: var(--subAc) !important;
 }
@@ -226,13 +233,27 @@ input:focus {
   .h1 {
     font-size: 3.375rem;
   }
+  .h2 {
+    font-size: 3.25rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .h2 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 47.9375rem) {
   .h1 {
     font-size: 2rem;
   }
+  .h2 {
+    font-size: 2.625rem;
+  }
   .h4 {
     line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 1rem;
   }
 }
 .svg-search {
@@ -645,36 +666,38 @@ input:focus {
   }
 }
 
-.header-content {
+.slider-content {
   height: calc(100vh - 6.875rem);
   max-height: 68.75rem;
   position: relative;
   padding-bottom: 0.1875rem;
 }
 @media (max-width: 99.9375rem) {
-  .header-content {
+  .slider-content {
     height: calc(100vh - 6.875rem);
     max-height: 44.0625rem;
   }
 }
 @media (max-width: 89.9375rem) {
-  .header-content {
+  .slider-content {
     height: calc(100vh - 6.875rem);
     max-height: 37.5rem;
   }
 }
 @media (max-width: 74.9375rem) {
-  .header-content {
+  .slider-content {
     height: 31.25rem;
   }
 }
 @media (max-width: 56.1875rem) {
-  .header-content {
+  .slider-content {
     height: 25.625rem;
   }
 }
 
-.header-content__title {
+.slider-content__title {
+  width: 100%;
+  padding-inline: 1rem;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -683,23 +706,32 @@ input:focus {
   text-align: center;
   color: #fff;
 }
-.header-content__title .h1 {
-  margin-bottom: 1.4375rem;
-  width: 15ch;
-}
-.header-content__title .btn {
+.slider-content__title .btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   width: fit-content;
 }
+
+.header .slider-content__title {
+  top: 52%;
+}
+.header .slider-content__title .h1 {
+  margin-bottom: 1.4375rem;
+  width: 15ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .slider-content__title .btn {
+  width: fit-content;
+}
 @media (max-width: 47.9375rem) {
-  .header-content__title {
+  .header .slider-content__title {
     top: 43%;
   }
-  .header-content__title .btn {
+  .header .slider-content__title .btn {
     min-width: 13rem;
   }
-  .header-content__title .h1 {
+  .header .slider-content__title .h1 {
     margin-bottom: 0.9375rem;
   }
 }
@@ -727,17 +759,17 @@ input:focus {
   }
 }
 
-.header-slider {
+.swiper {
   --swiper-pagination-bottom: 60px;
   height: 100%;
 }
-.header-slider__item, .header-slider__item img {
+.swiper__item, .swiper__item img {
   width: 100%;
   height: 100%;
   background-color: rgba(45, 40, 36, 0.2);
   position: relative;
 }
-.header-slider__item::before {
+.swiper__item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -747,22 +779,6 @@ input:focus {
   z-index: 1;
   background-color: rgba(45, 40, 36, 0.2);
 }
-@media (max-width: 99.9375rem) {
-  .header-slider {
-    --swiper-pagination-bottom: 40px;
-  }
-}
-@media (max-width: 47.9375rem) {
-  .header-slider__item img {
-    object-position: 60%;
-  }
-}
-@media (max-width: 26.4375rem) {
-  .header-slider__item img {
-    --swiper-pagination-bottom: 23px;
-  }
-}
-
 .swiper-pagination {
   gap: 0.5rem;
 }
@@ -777,6 +793,21 @@ input:focus {
   width: 1.0625rem;
   height: 1.0625rem;
   background-color: var(--ac);
+}
+@media (max-width: 99.9375rem) {
+  .swiper {
+    --swiper-pagination-bottom: 40px;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .swiper__item img {
+    object-position: 60%;
+  }
+}
+@media (max-width: 26.4375rem) {
+  .swiper__item img {
+    --swiper-pagination-bottom: 23px;
+  }
 }
 
 .result {
@@ -840,6 +871,9 @@ input:focus {
   .result .h4 {
     margin-bottom: 0.6875rem;
   }
+  .result__desc {
+    padding-bottom: 0;
+  }
   .result__desc-text {
     line-height: 2rem;
     margin-bottom: 3rem;
@@ -856,6 +890,31 @@ input:focus {
   .result__img-bottom img {
     width: 9.125rem;
   }
+}
+
+.cta {
+  text-align: center;
+}
+.cta .slider-content__title {
+  padding-bottom: 1.4375rem;
+}
+.cta .h2 {
+  text-shadow: 0 0 60px rgba(0, 0, 0, 0.46);
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 47.9375rem) {
+  .cta .h2 {
+    margin-top: 2.625rem;
+    margin-right: 2.0625rem;
+  }
+}
+.cta .subtitle {
+  margin: 0 auto 1rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 26.125rem;
+}
+.cta .swiper-pagination {
+  bottom: 1.625rem;
 }
 
 .premium {
@@ -973,4 +1032,4 @@ input:focus {
 }
 
 /*# sourceMappingURL=main.css.map */
-</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="header-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="header-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="header-slider__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result section-pb"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="premium"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>
+</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="slider-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="slider-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result section-pb"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="cta"><div class="slider-content"><div class="slider-content__title"><h2 class="h2">Become more than you are.</h2><p class="subtitle">Staying active is great fun and keeps you healthy.<Check>out how you can join in.</Check></p><a class="btn" href="#!">Let’s do it!</a></div><div class="swiper cta-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/cta-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div></div><div class="swiper-pagination"></div></div></div></section><section class="premium"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>

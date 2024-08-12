@@ -202,6 +202,13 @@ input:focus {
   font-size: 2.375rem;
 }
 
+.subtitle {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  font-family: "Open Sans";
+  line-height: 1.35;
+}
+
 .accent-span {
   color: var(--subAc) !important;
 }
@@ -214,13 +221,27 @@ input:focus {
   .h1 {
     font-size: 3.375rem;
   }
+  .h2 {
+    font-size: 3.25rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .h2 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 47.9375rem) {
   .h1 {
     font-size: 2rem;
   }
+  .h2 {
+    font-size: 2.625rem;
+  }
   .h4 {
     line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 1rem;
   }
 }
 .svg-search {
@@ -633,36 +654,38 @@ input:focus {
   }
 }
 
-.header-content {
+.slider-content {
   height: calc(100vh - 6.875rem);
   max-height: 68.75rem;
   position: relative;
   padding-bottom: 0.1875rem;
 }
 @media (max-width: 99.9375rem) {
-  .header-content {
+  .slider-content {
     height: calc(100vh - 6.875rem);
     max-height: 44.0625rem;
   }
 }
 @media (max-width: 89.9375rem) {
-  .header-content {
+  .slider-content {
     height: calc(100vh - 6.875rem);
     max-height: 37.5rem;
   }
 }
 @media (max-width: 74.9375rem) {
-  .header-content {
+  .slider-content {
     height: 31.25rem;
   }
 }
 @media (max-width: 56.1875rem) {
-  .header-content {
+  .slider-content {
     height: 25.625rem;
   }
 }
 
-.header-content__title {
+.slider-content__title {
+  width: 100%;
+  padding-inline: 1rem;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -671,23 +694,32 @@ input:focus {
   text-align: center;
   color: #fff;
 }
-.header-content__title .h1 {
-  margin-bottom: 1.4375rem;
-  width: 15ch;
-}
-.header-content__title .btn {
+.slider-content__title .btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   width: fit-content;
 }
+
+.header .slider-content__title {
+  top: 52%;
+}
+.header .slider-content__title .h1 {
+  margin-bottom: 1.4375rem;
+  width: 15ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .slider-content__title .btn {
+  width: fit-content;
+}
 @media (max-width: 47.9375rem) {
-  .header-content__title {
+  .header .slider-content__title {
     top: 43%;
   }
-  .header-content__title .btn {
+  .header .slider-content__title .btn {
     min-width: 13rem;
   }
-  .header-content__title .h1 {
+  .header .slider-content__title .h1 {
     margin-bottom: 0.9375rem;
   }
 }
@@ -715,17 +747,17 @@ input:focus {
   }
 }
 
-.header-slider {
+.swiper {
   --swiper-pagination-bottom: 60px;
   height: 100%;
 }
-.header-slider__item, .header-slider__item img {
+.swiper__item, .swiper__item img {
   width: 100%;
   height: 100%;
   background-color: rgba(45, 40, 36, 0.2);
   position: relative;
 }
-.header-slider__item::before {
+.swiper__item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -735,22 +767,6 @@ input:focus {
   z-index: 1;
   background-color: rgba(45, 40, 36, 0.2);
 }
-@media (max-width: 99.9375rem) {
-  .header-slider {
-    --swiper-pagination-bottom: 40px;
-  }
-}
-@media (max-width: 47.9375rem) {
-  .header-slider__item img {
-    object-position: 60%;
-  }
-}
-@media (max-width: 26.4375rem) {
-  .header-slider__item img {
-    --swiper-pagination-bottom: 23px;
-  }
-}
-
 .swiper-pagination {
   gap: 0.5rem;
 }
@@ -765,6 +781,21 @@ input:focus {
   width: 1.0625rem;
   height: 1.0625rem;
   background-color: var(--ac);
+}
+@media (max-width: 99.9375rem) {
+  .swiper {
+    --swiper-pagination-bottom: 40px;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .swiper__item img {
+    object-position: 60%;
+  }
+}
+@media (max-width: 26.4375rem) {
+  .swiper__item img {
+    --swiper-pagination-bottom: 23px;
+  }
 }
 
 .result {
@@ -828,6 +859,9 @@ input:focus {
   .result .h4 {
     margin-bottom: 0.6875rem;
   }
+  .result__desc {
+    padding-bottom: 0;
+  }
   .result__desc-text {
     line-height: 2rem;
     margin-bottom: 3rem;
@@ -844,6 +878,34 @@ input:focus {
   .result__img-bottom img {
     width: 9.125rem;
   }
+}
+
+.cta {
+  text-align: center;
+}
+.cta .slider-content__title {
+  padding-bottom: 1.4375rem;
+}
+.cta .slider-content__title .h2 {
+  text-shadow: 0 0 60px rgba(0, 0, 0, 0.46);
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 47.9375rem) {
+  .cta .slider-content__title .h2 {
+    margin-top: 2.625rem;
+    margin-right: 2.0625rem;
+  }
+  .cta .slider-content__title .btn {
+    width: 100%;
+  }
+}
+.cta .slider-content__title .subtitle {
+  margin: 0 auto 1rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 26.125rem;
+}
+.cta .slider-content__title .swiper-pagination {
+  bottom: 1.625rem;
 }
 
 .premium {
