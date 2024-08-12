@@ -140,6 +140,20 @@ input:focus {
   padding: 0;
 }
 
+*.section-pb {
+  padding-block: 4rem 4.4375rem;
+}
+@media (max-width: 61.9375rem) {
+  *.section-pb {
+    padding-block: 3.125rem 3.75rem;
+  }
+}
+@media (max-width: 48rem) {
+  *.section-pb {
+    padding-block: 2.1875rem 1.4375rem;
+  }
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -829,6 +843,120 @@ input:focus {
   }
   .result__img-bottom img {
     width: 9.125rem;
+  }
+}
+
+.premium {
+  padding-block: 14rem 8.0625rem;
+}
+.premium-content {
+  display: flex;
+  align-items: center;
+  gap: 9.0625rem;
+}
+@media (max-width: 85.25rem) {
+  .premium-content {
+    gap: 1.875rem;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .premium-content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.premium__desc {
+  flex-grow: 1;
+  max-width: 30.5625rem;
+  padding-top: 3.875rem;
+  flex-shrink: 0;
+}
+@media (max-width: 85.25rem) {
+  .premium__desc {
+    padding-top: 0;
+  }
+}
+@media (max-width: 74.9375rem) {
+  .premium__desc {
+    flex-shrink: 1;
+  }
+}
+.premium__desc .h4 {
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 47.9375rem) {
+  .premium__desc .h4 {
+    margin-bottom: 0.5625rem;
+  }
+}
+.premium__desc-text {
+  font-size: 1rem;
+  line-height: 2.3125rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 47.9375rem) {
+  .premium__desc-text {
+    padding-right: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 2.4375rem;
+  }
+}
+.premium__img {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.premium__img img {
+  aspect-ratio: 3/2;
+}
+@media (max-width: 74.9375rem) {
+  .premium__img img {
+    width: 23.75rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .premium__img img {
+    width: 16.25rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .premium__img img {
+    width: 12.625rem;
+  }
+}
+.premium__img-top {
+  position: relative;
+  z-index: 2;
+}
+.premium__img-bottom {
+  padding-left: 9.375rem;
+  margin-top: -8.75rem;
+}
+@media (max-width: 74.9375rem) {
+  .premium__img-bottom {
+    padding-left: 3.125rem;
+    margin-top: -5rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .premium__img-bottom {
+    padding-left: 5.125rem;
+    margin-top: -4rem;
+  }
+  .premium__img-bottom img {
+    width: 11.9375rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .premium {
+    padding-block: 7rem 4.6875rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .premium {
+    padding-block: 4.625rem 1.75rem;
   }
 }
 
