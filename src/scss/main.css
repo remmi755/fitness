@@ -67,6 +67,7 @@ body {
   --subAc: #FFC1D8;
   --outBr: #FFDAE7;
   --darkAc: #BE285E;
+  --decoreColor: #f8c5d7;
 }
 
 body.green-theme {
@@ -74,6 +75,7 @@ body.green-theme {
   --subAc: #9BE8C7;
   --outBr: #a1e7c9;
   --darkAc: #0b9056;
+  --decoreColor: #8fc089;
 }
 
 html {
@@ -190,7 +192,6 @@ input:focus {
   font-size: 3rem;
   line-height: 1.1;
   font-weight: 600;
-  color: #E43071;
 }
 
 .h4 {
@@ -237,8 +238,16 @@ input:focus {
   .h2 {
     font-size: 2.625rem;
   }
+  .h3 {
+    font-size: 1.625rem;
+    line-height: 1.19;
+  }
   .h4 {
     line-height: 1.2;
+  }
+  .h5 {
+    font-size: 1.625rem;
+    line-height: 1.19;
   }
   .subtitle {
     font-size: 1rem;
@@ -1019,6 +1028,251 @@ input:focus {
 @media (max-width: 47.9375rem) {
   .premium {
     padding-block: 4.625rem 1.75rem;
+  }
+}
+
+.stories {
+  padding-top: 8.125rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(180deg, #fff 0%, #f4e3e9 100%);
+}
+.stories-content {
+  width: 100%;
+  max-width: 59.6875rem;
+  margin: 0 auto;
+}
+@media (max-width: 61.9375rem) {
+  .stories-content {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .stories-content {
+    padding: 0 1.75rem;
+  }
+}
+.stories__title {
+  margin-bottom: 1.5625rem;
+}
+.stories__title .h3 {
+  line-height: 1.19;
+  margin-bottom: 0.875rem;
+}
+.stories__title p {
+  font-size: 1.125rem;
+}
+@media (max-width: 47.9375rem) {
+  .stories__title {
+    padding-left: 0.1875rem;
+  }
+  .stories__title .h3 {
+    margin-bottom: 0.375rem;
+  }
+  .stories__title p {
+    font-size: 0.5625rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .stories {
+    overflow-x: hidden;
+    padding-top: 3.75rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.stories-cards-wrapper {
+  padding-left: 6.0625rem;
+  padding-bottom: 4.25rem;
+  display: flex;
+  gap: 2.0625rem;
+  position: relative;
+  align-items: flex-start;
+}
+@media (max-width: 61.9375rem) {
+  .stories-cards-wrapper {
+    align-items: stretch;
+    gap: 1.6875rem;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+.stories-card {
+  width: 21.8125rem;
+  flex-shrink: 0;
+  box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.18);
+  background: #fff;
+  border-radius: 0.625rem;
+  padding: 2rem 2rem 2.375rem 1.6875rem;
+}
+.stories-card .h5 {
+  color: var(--ac);
+  margin-bottom: 1.125rem;
+}
+.stories-card__text {
+  font-size: 1.125rem;
+  line-height: 1.78;
+  padding-left: 2.3125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.125rem;
+  position: relative;
+}
+.stories-card__text strong {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-family: "Times New Roman";
+  font-size: 3.625rem;
+  color: var(--decoreColor);
+  line-height: 1;
+}
+.stories-card__footer {
+  display: flex;
+  gap: 1.0625rem;
+  align-items: center;
+  padding-left: 2.4375rem;
+}
+.stories-card__img {
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.stories-card__name p {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.stories-card__name span {
+  display: block;
+  font-size: 0.875rem;
+  color: #969bab;
+}
+.stories-card:nth-child(2) {
+  margin-top: -9.1875rem;
+  width: 28.0625rem;
+  padding: 2.875rem 2rem 2.375rem 2.125rem;
+}
+.stories-card:nth-child(2) .h5 {
+  color: var(--ac);
+  margin-bottom: 11px;
+}
+.stories-card:nth-child(2) .stories-card__text {
+  padding-left: 1.8125rem;
+  margin-top: 0.6875rem;
+  margin-bottom: 0.75rem;
+}
+.stories-card:nth-child(2) .stories-card__text strong {
+  left: -0.5rem;
+  top: -0.875rem;
+}
+.stories-card:nth-child(2) .stories-card__footer {
+  gap: 1.0625rem;
+  align-items: center;
+  padding-left: 2rem;
+}
+@media (max-width: 61.9375rem) {
+  .stories-card:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+.stories-card:nth-child(3) {
+  width: 21.9375rem;
+  padding: 1.375rem 1.9375rem 1.9375rem 2.3125rem;
+  position: absolute;
+  bottom: 0;
+  right: 7.9375rem;
+}
+.stories-card:nth-child(3) .stories-card__text {
+  padding-left: 1.75rem;
+  margin-top: 1.5625rem;
+}
+.stories-card:nth-child(3) .stories-card__text strong {
+  left: -0.5625rem;
+  top: -0.5625rem;
+}
+.stories-card:nth-child(3) .stories-card__footer {
+  align-items: center;
+  padding-left: 2rem;
+}
+@media (max-width: 61.9375rem) {
+  .stories-card:nth-child(3) {
+    position: relative;
+    right: auto;
+    bottom: auto;
+  }
+  .stories-card:nth-child(3) .stories-card__text {
+    margin-top: 0.6875rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .stories-card:nth-child(3) {
+    margin-right: 1.25rem;
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .stories-card,
+  .stories-card:nth-child(2),
+  .stories-card:nth-child(3) {
+    padding: 1.5rem 1.375rem 1.625rem 1.1875rem;
+    width: 15.1875rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .stories-card .h5,
+  .stories-card:nth-child(2) .h5,
+  .stories-card:nth-child(3) .h5 {
+    width: 100%;
+    font-size: 1.625rem;
+    margin-bottom: 1.25rem;
+  }
+  .stories-card .stories-card__text,
+  .stories-card:nth-child(2) .stories-card__text,
+  .stories-card:nth-child(3) .stories-card__text {
+    width: 100%;
+    flex-grow: 1;
+    padding-left: 1.5625rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .stories-card .stories-card__text strong,
+  .stories-card:nth-child(2) .stories-card__text strong,
+  .stories-card:nth-child(3) .stories-card__text strong {
+    font-size: 1.625rem;
+    top: -0.1875rem;
+    left: 0.375rem;
+  }
+  .stories-card .stories-card__footer,
+  .stories-card:nth-child(2) .stories-card__footer,
+  .stories-card:nth-child(3) .stories-card__footer {
+    width: 100%;
+    gap: 0.8125rem;
+    padding-left: 1.5625rem;
+  }
+  .stories-card .stories-card__img,
+  .stories-card:nth-child(2) .stories-card__img,
+  .stories-card:nth-child(3) .stories-card__img {
+    width: 2.5625rem;
+    height: 2.5rem;
+  }
+  .stories-card .stories-card__name p,
+  .stories-card:nth-child(2) .stories-card__name p,
+  .stories-card:nth-child(3) .stories-card__name p {
+    font-size: 0.75rem;
+  }
+  .stories-card .stories-card__name span,
+  .stories-card:nth-child(2) .stories-card__name span,
+  .stories-card:nth-child(3) .stories-card__name span {
+    font-size: 0.5625rem;
+  }
+  .stories-cards-wrapper {
+    width: calc(50% + 50vw);
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .stories-cards-wrapper::-webkit-scrollbar {
+    display: none;
   }
 }
 

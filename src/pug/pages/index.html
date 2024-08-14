@@ -79,6 +79,7 @@ body {
   --subAc: #FFC1D8;
   --outBr: #FFDAE7;
   --darkAc: #BE285E;
+  --decoreColor: #f8c5d7;
 }
 
 body.green-theme {
@@ -86,6 +87,7 @@ body.green-theme {
   --subAc: #9BE8C7;
   --outBr: #a1e7c9;
   --darkAc: #0b9056;
+  --decoreColor: #8fc089;
 }
 
 html {
@@ -202,7 +204,6 @@ input:focus {
   font-size: 3rem;
   line-height: 1.1;
   font-weight: 600;
-  color: #E43071;
 }
 
 .h4 {
@@ -249,8 +250,16 @@ input:focus {
   .h2 {
     font-size: 2.625rem;
   }
+  .h3 {
+    font-size: 1.625rem;
+    line-height: 1.19;
+  }
   .h4 {
     line-height: 1.2;
+  }
+  .h5 {
+    font-size: 1.625rem;
+    line-height: 1.19;
   }
   .subtitle {
     font-size: 1rem;
@@ -898,22 +907,25 @@ input:focus {
 .cta .slider-content__title {
   padding-bottom: 1.4375rem;
 }
-.cta .h2 {
+.cta .slider-content__title .h2 {
   text-shadow: 0 0 60px rgba(0, 0, 0, 0.46);
   margin-bottom: 1.5rem;
 }
 @media (max-width: 47.9375rem) {
-  .cta .h2 {
+  .cta .slider-content__title .h2 {
     margin-top: 2.625rem;
     margin-right: 2.0625rem;
   }
+  .cta .slider-content__title .btn {
+    width: 100%;
+  }
 }
-.cta .subtitle {
+.cta .slider-content__title .subtitle {
   margin: 0 auto 1rem;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   max-width: 26.125rem;
 }
-.cta .swiper-pagination {
+.cta .slider-content__title .swiper-pagination {
   bottom: 1.625rem;
 }
 
@@ -1031,5 +1043,250 @@ input:focus {
   }
 }
 
+.stories {
+  padding-top: 8.125rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(180deg, #fff 0%, #f4e3e9 100%);
+}
+.stories-content {
+  width: 100%;
+  max-width: 59.6875rem;
+  margin: 0 auto;
+}
+@media (max-width: 61.9375rem) {
+  .stories-content {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .stories-content {
+    padding: 0 1.75rem;
+  }
+}
+.stories__title {
+  margin-bottom: 1.5625rem;
+}
+.stories__title .h3 {
+  line-height: 1.19;
+  margin-bottom: 0.875rem;
+}
+.stories__title p {
+  font-size: 1.125rem;
+}
+@media (max-width: 47.9375rem) {
+  .stories__title {
+    padding-left: 0.1875rem;
+  }
+  .stories__title .h3 {
+    margin-bottom: 0.375rem;
+  }
+  .stories__title p {
+    font-size: 0.5625rem;
+  }
+}
+@media (max-width: 61.9375rem) {
+  .stories {
+    overflow-x: hidden;
+    padding-top: 3.75rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.stories-cards-wrapper {
+  padding-left: 6.0625rem;
+  padding-bottom: 4.25rem;
+  display: flex;
+  gap: 2.0625rem;
+  position: relative;
+  align-items: flex-start;
+}
+@media (max-width: 61.9375rem) {
+  .stories-cards-wrapper {
+    align-items: stretch;
+    gap: 1.6875rem;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+.stories-card {
+  width: 21.8125rem;
+  flex-shrink: 0;
+  box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.18);
+  background: #fff;
+  border-radius: 0.625rem;
+  padding: 2rem 2rem 2.375rem 1.6875rem;
+}
+.stories-card .h5 {
+  color: var(--ac);
+  margin-bottom: 1.125rem;
+}
+.stories-card__text {
+  font-size: 1.125rem;
+  line-height: 1.78;
+  padding-left: 2.3125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.125rem;
+  position: relative;
+}
+.stories-card__text strong {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-family: "Times New Roman";
+  font-size: 3.625rem;
+  color: var(--decoreColor);
+  line-height: 1;
+}
+.stories-card__footer {
+  display: flex;
+  gap: 1.0625rem;
+  align-items: center;
+  padding-left: 2.4375rem;
+}
+.stories-card__img {
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.stories-card__name p {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.stories-card__name span {
+  display: block;
+  font-size: 0.875rem;
+  color: #969bab;
+}
+.stories-card:nth-child(2) {
+  margin-top: -9.1875rem;
+  width: 28.0625rem;
+  padding: 2.875rem 2rem 2.375rem 2.125rem;
+}
+.stories-card:nth-child(2) .h5 {
+  color: var(--ac);
+  margin-bottom: 11px;
+}
+.stories-card:nth-child(2) .stories-card__text {
+  padding-left: 1.8125rem;
+  margin-top: 0.6875rem;
+  margin-bottom: 0.75rem;
+}
+.stories-card:nth-child(2) .stories-card__text strong {
+  left: -0.5rem;
+  top: -0.875rem;
+}
+.stories-card:nth-child(2) .stories-card__footer {
+  gap: 1.0625rem;
+  align-items: center;
+  padding-left: 2rem;
+}
+@media (max-width: 61.9375rem) {
+  .stories-card:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+.stories-card:nth-child(3) {
+  width: 21.9375rem;
+  padding: 1.375rem 1.9375rem 1.9375rem 2.3125rem;
+  position: absolute;
+  bottom: 0;
+  right: 7.9375rem;
+}
+.stories-card:nth-child(3) .stories-card__text {
+  padding-left: 1.75rem;
+  margin-top: 1.5625rem;
+}
+.stories-card:nth-child(3) .stories-card__text strong {
+  left: -0.5625rem;
+  top: -0.5625rem;
+}
+.stories-card:nth-child(3) .stories-card__footer {
+  align-items: center;
+  padding-left: 2rem;
+}
+@media (max-width: 61.9375rem) {
+  .stories-card:nth-child(3) {
+    position: relative;
+    right: auto;
+    bottom: auto;
+  }
+  .stories-card:nth-child(3) .stories-card__text {
+    margin-top: 0.6875rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .stories-card:nth-child(3) {
+    margin-right: 1.25rem;
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .stories-card,
+  .stories-card:nth-child(2),
+  .stories-card:nth-child(3) {
+    padding: 1.5rem 1.375rem 1.625rem 1.1875rem;
+    width: 15.1875rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .stories-card .h5,
+  .stories-card:nth-child(2) .h5,
+  .stories-card:nth-child(3) .h5 {
+    width: 100%;
+    font-size: 1.625rem;
+    margin-bottom: 1.25rem;
+  }
+  .stories-card .stories-card__text,
+  .stories-card:nth-child(2) .stories-card__text,
+  .stories-card:nth-child(3) .stories-card__text {
+    width: 100%;
+    flex-grow: 1;
+    padding-left: 1.5625rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .stories-card .stories-card__text strong,
+  .stories-card:nth-child(2) .stories-card__text strong,
+  .stories-card:nth-child(3) .stories-card__text strong {
+    font-size: 1.625rem;
+    top: -0.1875rem;
+    left: 0.375rem;
+  }
+  .stories-card .stories-card__footer,
+  .stories-card:nth-child(2) .stories-card__footer,
+  .stories-card:nth-child(3) .stories-card__footer {
+    width: 100%;
+    gap: 0.8125rem;
+    padding-left: 1.5625rem;
+  }
+  .stories-card .stories-card__img,
+  .stories-card:nth-child(2) .stories-card__img,
+  .stories-card:nth-child(3) .stories-card__img {
+    width: 2.5625rem;
+    height: 2.5rem;
+  }
+  .stories-card .stories-card__name p,
+  .stories-card:nth-child(2) .stories-card__name p,
+  .stories-card:nth-child(3) .stories-card__name p {
+    font-size: 0.75rem;
+  }
+  .stories-card .stories-card__name span,
+  .stories-card:nth-child(2) .stories-card__name span,
+  .stories-card:nth-child(3) .stories-card__name span {
+    font-size: 0.5625rem;
+  }
+  .stories-cards-wrapper {
+    width: calc(50% + 50vw);
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .stories-cards-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
-</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="slider-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="slider-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result section-pb"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="cta"><div class="slider-content"><div class="slider-content__title"><h2 class="h2">Become more than you are.</h2><p class="subtitle">Staying active is great fun and keeps you healthy.<Check>out how you can join in.</Check></p><a class="btn" href="#!">Let’s do it!</a></div><div class="swiper cta-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/cta-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div></div><div class="swiper-pagination"></div></div></div></section><section class="premium"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>
+</style></head><body><!--h1.h1 Hello World--><!--a(href="#").btn Button--><!--a(href="#").btn-outline Buttong--><!----><!--input.btn(type="submit" value="Button")--><!--input.btn-outline(type="submit" value="Button")--><!--svg.svg-inst--><!--    use(href="../../img/sprite/brands.svg#instagram")--><header class="header"><div class="header-nav d-flex"><div class="header-container d-flex"><a class="logo" href="#!">Good<span class="accent-span">Life</span></a><div id="header-menu"><nav class="header-menu d-flex"><a href="#!">Classes</a><a href="#!">Timetable</a><a href="#!">Clubs</a><a href="#!">Nutrition</a><a href="#!">Free Trial</a></nav></div><!--nav.header-menu.d-flex#header-menu--><!--    a(href="#!") Classes--><!--    a(href="#!") Timetable--><!--    a(href="#!") Clubs--><!--    a(href="#!") Nutrition--><!--    a(href="#!") Free Trial--><div class="header-nav__btn d-flex"><button class="search-open d-flex" id="search-open"><span>Search</span><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="btn-outline btn-outline__slim">Login</button><button class="menu-toggle" id="menu-toggle"><span></span></button></div></div></div><div class="header_seach__wrapper" id="header-search-form"><div class="header-container"><form class="search-form"><div class="form-item"><input type="text" placeholder="Search..."><button class="search-btn" type="submit"><svg class="svg-search"><use href="../../img/sprite/solid.svg#magnifying-glass"></use></svg></button><button class="reset-btn" type="reset"><svg class="svg-xmark"><use href="../../img/sprite/solid.svg#xmark"></use></svg></button></div></form></div></div><div class="slider-content"><div class="header-content__svg"><svg class="svg-border-desk" viewBox="0 0 1440 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.0112C0 14.0112 412.629 -12.7579 720 14.0112C1027.37 40.7803 1440 0.558594 1440 0.558594V34.5586H0" fill="white"></path></svg><svg class="svg-border-mob" viewBox="0 0 320 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9.89162C0 9.89162 91.6953 -9.79156 160 9.89162C228.305 29.5748 320 0 320 0V25H0" fill="white"></path></svg></div><div class="slider-content__title"><h1 class="h1">Welcome to <br> Good<span class="accent-span">Life</span> Gyms</h1><a class="btn" href="#!">See the benefits</a></div><div class="swiper header-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide1.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide2.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide3.webp", alt="img", loading="lazy")--><!----><!--.swiper-slide--><!--    .header-slider__item--><!--        img(src="../../img/header-slide4.webp", alt="img", loading="lazy")--></div><div class="swiper-pagination"></div></div></div></header><main class="main"><section class="result section-pb"><div class="container"><div class="result-content"><div class="result__img"><div class="result__img-top"><img src="../../img/result-img-top.jpg" width="347" height="399" alt="result-img"></div><div class="result__img-bottom"><img src="../../img/result-img-bottom.jpg" width="241" height="359" alt="result-img"></div></div><div class="result__desc"><h2 class="h4 txt-accent">Meet your new body</h2><div class="result__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">View the FAQ</a></div></div></div></section><section class="cta"><div class="slider-content"><div class="slider-content__title"><h2 class="h2">Become more than you are.</h2><p class="subtitle">Staying active is great fun and keeps you healthy.<Check>out how you can join in.</Check></p><a class="btn" href="#!">Let’s do it!</a></div><div class="swiper cta-slider"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper__item"><img src="../../img/cta-slide1.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide2.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide3.webp" alt="img" loading="lazy"></div></div><div class="swiper-slide"><div class="swiper__item"><img src="../../img/header-slide4.webp" alt="img" loading="lazy"></div></div></div><div class="swiper-pagination"></div></div></div></section><section class="premium"><div class="container"><div class="premium-content"><div class="premium__desc"><h2 class="h4 txt-accent">Premium Facilities</h2><div class="premium__desc-text"><p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p></div><a class="btn-outline" href="#!">Learn more</a></div><div class="premium__img"><div class="premium__img-top"><img src="../../img/premium-img-top.jpg" width="444" height="296" alt="premium-img"></div><div class="premium__img-bottom"><img src="../../img/premium-img-bottom.jpg" width="422" height="281" alt="premium-img"></div></div></div></div></section><section class="stories"><div class="stories-content"><div class="stories__title"><h2 class="h3">Real Stories from <br>Real Customers</h2><p>Be inspired with these experiences.</p></div><div class="stories-cards-wrapper"><div class="stories-card"><h3 class="h5">3Kg lost!</h3><div class="stories-card__text"><strong>&#8220;</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.</p></div><div class="stories-card__footer"><div class="stories-card__img"><img src="../../img/avatar1.webp" width="59" height="57" alt="Stories Image"></div><div class="stories-card__name"><p>James John</p><span>Mother of two h</span></div></div></div><div class="stories-card"><h3 class="h5">17Kg lost!</h3><div class="stories-card__text"><strong>&#8220;</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in mo.</p></div><div class="stories-card__footer"><div class="stories-card__img"><img src="../../img/avatar2.webp" width="59" height="57" alt="Stories Image"></div><div class="stories-card__name"><p>Mary Patricia</p><span>Mother of two h</span></div></div></div><div class="stories-card"><h3 class="h5">43Kg lost!</h3><div class="stories-card__text"><strong>&#8220;</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="stories-card__footer"><div class="stories-card__img"><img src="../../img/avatar3.webp" width="59" height="57" alt="Stories Image"></div><div class="stories-card__name"><p>Robert Micheal</p><span>Mother of two h</span></div></div></div></div></div></section></main><script src="../../lib/swiper/swiper-bundle.min.js"></script><script src="../../js/main.js"></script></body></html>
