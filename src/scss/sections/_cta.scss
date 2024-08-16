@@ -13,7 +13,7 @@
     @media (max-width: remy(767)) {
 
       .h2 {
-        margin-top: remy(42);
+        margin-top: remy(18);
         margin-right: remy(33);
       }
 
@@ -33,6 +33,14 @@
 
     .swiper-pagination {
       bottom: remy(26);
+    }
+  }
+
+  @media (max-width: remy(767)) {
+
+    .slider-content{
+      min-height: remy(443);
+      
     }
   }
 

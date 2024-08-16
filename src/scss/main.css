@@ -901,7 +901,7 @@ input:focus {
 }
 @media (max-width: 47.9375rem) {
   .cta .slider-content__title .h2 {
-    margin-top: 2.625rem;
+    margin-top: 1.125rem;
     margin-right: 2.0625rem;
   }
   .cta .slider-content__title .btn {
@@ -915,6 +915,11 @@ input:focus {
 }
 .cta .slider-content__title .swiper-pagination {
   bottom: 1.625rem;
+}
+@media (max-width: 47.9375rem) {
+  .cta .slider-content {
+    min-height: 27.6875rem;
+  }
 }
 
 .premium {
@@ -1321,11 +1326,18 @@ input:focus {
   align-items: center;
   gap: 0.75rem;
 }
+.app-links__group a {
+  flex-shrink: 0;
+}
+.app-links__group img {
+  width: 8.5rem;
+  height: 2.5rem;
+}
 @media (max-width: 47.9375rem) {
   .app {
     padding-top: 3.1875rem;
-    padding-bottom: 0;
-    overflow-x: hidden;
+    padding-bottom: 6.125rem;
+    overflow: hidden;
   }
   .app-content {
     line-height: 2.06;
@@ -1336,9 +1348,22 @@ input:focus {
   .app-content__text {
     margin-bottom: 1.875rem;
   }
-  .app-content-links__group img {
-    width: 8.5rem;
-    height: 2.5rem;
+}
+
+.app::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.25rem;
+  background-color: #EDEDED;
+  z-index: 2;
+  display: none;
+}
+@media (max-width: 61.9375rem) {
+  .app::after {
+    display: block;
   }
 }
 
@@ -1362,10 +1387,18 @@ input:focus {
   .app-images__item {
     width: 12.5rem;
   }
+  .app-images__item:last-child {
+    top: 10.9375rem;
+  }
 }
 @media (max-width: 61.9375rem) {
   .app-images {
     margin-top: 2.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  .app-images__item:last-child {
+    top: 5.3125rem;
   }
 }
 @media (max-width: 47.9375rem) {
