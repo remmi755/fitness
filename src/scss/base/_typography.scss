@@ -26,13 +26,20 @@
 .subtitle {
   font-size: remy(17);
   font-weight: 600;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.35;
 
 }
-
+.block-title {
+  font-size: remy(20);
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: 'Manrope', sans-serif;
+  color: #fff;
+  margin-bottom: remy(24);
+}
 .accent-span {
-  color: var(--subAc) !important;
+  color: var(--subAc);
 }
 
 .txt-accent {

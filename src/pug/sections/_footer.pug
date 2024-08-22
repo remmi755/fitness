@@ -1,0 +1,81 @@
+mixin social-item(svgName, svgWidth, svgHeight)
+    a(href="#!")
+        svg(width=svgWidth height=svgHeight)
+            use(href="../../img/sprite/brands.svg#" + svgName)
+
+mixin footer-menu(menuTitle, ...menuLinks)
+    .footer-menu
+        h4.block-title #{menuTitle}
+        ul.footer-menu__list
+            each link in menuLinks
+                li
+                    a(href="#!")= link
+
+//mixin contacts-item(svgName, hrefType, contactText)
+//    li
+//        a(href=`${hrefType}:${contactText}`)
+//            svg(width="20" height="20")
+//                use(href="../../img/sprite/solid.svg#" + svgName)
+//        | #{contactText}
+
+footer.footer
+    .container
+        .footer-row
+            .footer-col
+                a(href="#!").logo.logo__footer.mb-24 Good#[span.accent-span Life]
+                .footer-text.mb-24
+                    p Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.
+                .footer-social
+                    +social-item('instagram', '13', '13')
+                    +social-item('dribbble',  '13', '13')
+                    +social-item('twitter',  '13', '13')
+                    +social-item('youtube',  '13', '10')
+            +footer-menu('Quick Links', 'Classes', 'Timetable', 'Clubs', 'Nutrition', 'Free Trial')
+            +footer-menu('Guides', 'Weight Loss', 'Strength Gain', 'Crossfit', 'Washbaord Abs', 'Dieting')
+            //.footer-menu
+            //    h4.block-title Quick Links
+            //    nav.footer-menu__list
+            //        a(href="#!") Classes
+            //        a(href="#!") Timetable
+            //        a(href="#!") Clubs
+            //        a(href="#!") Nutrition
+            //        a(href="#!") Free Trial
+            //.footer-menu
+            //    h4.block-title Guides
+            //    nav.footer-menu__list
+            //        a(href="#!") Weight Loss
+            //        a(href="#!") Strength Gain
+            //        a(href="#!") Crossfit
+            //        a(href="#!") Washbaord Abs
+            //        a(href="#!") Dieting
+            .footer-contacts
+                h4.block-title Reach Us
+                ul.contacts-list
+                    //+contacts-item('envelope', 'mailto', 'admin@goodlyfe.co')
+                    //+contacts-item('phone-volume', 'tel', '+88 98765 43210')
+                    //+contacts-item('location-dot', 'mailto', '90210 Beverly Hills\n' +
+                    //'California USA')
+                    li
+                        a(href="mailto:admin@goodlyfe.co")
+                            svg(width="20" height="20")
+                                use(href="../../img/sprite/solid.svg#envelope")
+                            span admin@goodlyfe.co
+                    li
+                        a(href="tel:+889876543210")
+                            svg(width="20" height="20")
+                                use(href="../../img/sprite/solid.svg#phone-volume")
+                            span +88 98765 43210
+                    li
+                        a(href="https://maps.app.goo.gl/KZ2YurT5jyN2hb4e9" target="_blank" rel="noopener")
+                            svg(width="20" height="20")
+                                use(href="../../img/sprite/solid.svg#location-dot")
+                            span 90210 Beverly Hills #[br] California USA
+        .footer-row.footer-row--justify
+            .footer-text
+                p © 2020 GoodLife. All rights reserved
+            .footer-privacy
+                nav
+                    a(href="#!") Terms & Conditions
+                    a(href="#!") Privacy Policy
+                    a(href="#!") Sitemap
+                    a(href="#!") Disclaimer

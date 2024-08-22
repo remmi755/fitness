@@ -80,7 +80,7 @@ body {
   --subAc: #FFC1D8;
   --outBr: #FFDAE7;
   --darkAc: #BE285E;
-  --decoreColor:  #f8c5d7;
+  --decoreColor: #f8c5d7;
 }
 
 body.green-theme {
@@ -101,12 +101,17 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  color: $sec1;
   -webkit-font-smoothing: antialiased;
   background-color: white;
 }
 
 .lock {
   overflow: hidden;
+}
+
+a {
+  display: inline-block;
 }
 
 a,
@@ -155,7 +160,7 @@ input:focus {
   padding: 0;
 }
 
-*.section-pb{
+*.section-pb {
   padding-block: remy(64) remy(71);
 
   @media (max-width: remy(991)) {
