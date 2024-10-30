@@ -1,0 +1,15 @@
+.contact
+    .contact__container
+        .contact__content
+            h2.h4.txt-accent Contact us
+            .alert.hidden
+                p.subtitle.alert__text
+                span x
+            p.contact__text.h5 Add your details and we will get back to you as soon as possible
+            form.contact__form(action="#" method="post")
+                input.contact__input(type="text" placeholder="Name" name="name" minlength="3" maxlength="20" required)
+                input.contact__input(type="email" placeholder="Email" name="email" required)
+                textarea.contact__textarea(placeholder="Message" minlength="10" name="message" required)
+                button.btn.contact__btn(type="submit") Send
+        //.contact__img
+        //    img(src="../../img/avatar1.webp" alt="Contact us")
