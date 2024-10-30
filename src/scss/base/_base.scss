@@ -156,7 +156,7 @@ input:focus {
   font-family: inherit;
   border: none;
   outline: none;
-  background: none;
+  //background: none;
   padding: 0;
 }
 
@@ -190,4 +190,8 @@ input:focus {
     padding-inline: remy(16);
   }
 
+}
+
+.hidden {
+  display: none;
 }

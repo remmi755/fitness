@@ -143,7 +143,6 @@ input:focus {
   font-family: inherit;
   border: none;
   outline: none;
-  background: none;
   padding: 0;
 }
 
@@ -181,6 +180,10 @@ input:focus {
   .container {
     padding-inline: 1rem;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 .h1, h2, .h4 {
@@ -1495,6 +1498,48 @@ input:focus {
   width: 1.5625rem;
 }
 
+.contact {
+  background-color: #f9f9f9;
+}
+
+.contact__container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.contact__content {
+  text-align: center;
+}
+.contact__content .alert {
+  position: relative;
+}
+.contact__content .alert span {
+  position: absolute;
+  top: -1px;
+  right: 30%;
+  cursor: pointer;
+}
+.contact__content .contact__text {
+  font-size: 16px;
+  margin: 30px 0;
+}
+.contact__content .contact__form input, .contact__content .contact__form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.alert-success {
+  color: green;
+}
+
+.alert-danger {
+  color: red;
+}
+
 .footer {
   padding-block: 5.75rem 1.5rem;
   background-color: #0B0D17;
@@ -1569,7 +1614,7 @@ input:focus {
   transition: 0.3s;
 }
 .footer .contacts-list a:hover, .footer-menu__list a:hover {
-  color: var(--subAc);
+  color: var(--ac);
 }
 .footer-privacy {
   text-align: center;

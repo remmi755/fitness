@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "scss": "node-sass -watch scss -o css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "node-sass": "^9.0.0",
     "pug": "^3.0.3",
     "sass": "^1.77.7"

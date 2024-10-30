@@ -1,3 +1,5 @@
+// import sendMessage from "./contact/contact.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const headerSearchOpen = document.querySelector("#search-open");
   const headerSearchForm = document.querySelector("#header-search-form");
@@ -61,3 +63,67 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+// Contact form
+
+const FORM_DATA = document.querySelector(".contact__form");
+const ERROR_MESSAGE = "Failed to send data";
+const SUCCESS_MESSAGE = "Successfully sent data";
+
+FORM_DATA.addEventListener("submit", formSend);
+
+async function formSend(e) {
+  e.preventDefault();
+
+  // const TOKEN = process.env.TOKEN;
+  // const CHAT_ID = process.env.CHAT_ID;
+  // const URI_API =
+  //   "https://api.telegram.org/bot" + process.env.TOKEN + "/sendMessage";
+  const URI_API = `https://api.telegram.org/bot8059678452:AAFJ6llZnwEg6dlPCD5GQa96zS7xZ6dNrhw/sendMessage`;
+
+  let message = `<b>Contact info:</b>
+      <b>User: ${this.name.value}</b>
+      <b>Email: ${this.email.value}</b>
+      <b>Text: ${this.message.value}</b>`;
+
+  const res = await fetch(URI_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // chat_id: CHAT_ID,
+      chat_id: "-1002484455170",
+      text: message,
+      parse_mode: "html",
+    }),
+  });
+
+  const result = await res.json();
+
+  if (result.ok) {
+    showMessage(true);
+    FORM_DATA.reset();
+    console.log(SUCCESS_MESSAGE);
+  } else {
+    showMessage(false);
+    console.log(ERROR_MESSAGE);
+  }
+}
+
+function showMessage(isSuccess) {
+  const alert = document.querySelector(".alert");
+  const text = document.querySelector(".alert p");
+  const closeBtn = document.querySelector(".alert span");
+  alert.classList.remove("hidden");
+  if (isSuccess) {
+    alert.classList.add("alert-success");
+    text.textContent = "Successfully sent data";
+  } else {
+    alert.classList.add("alert-danger");
+    text.textContent = "Failed to send data";
+  }
+  closeBtn.addEventListener("click", () => {
+    alert.classList.add("hidden");
+  });
+}
